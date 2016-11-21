@@ -6,10 +6,12 @@ architecture=$(dpkg --print-architecture);
 
 cd /usr/src/
 
+wget https://raw.githubusercontent.com/sebastian-king/squid3-ssl/master/squid-ssl.patch
+
 apt-get source squid
 apt-get build-dep squid
 apt-get install devscripts build-essential fakeroot libssl-dev #dpkg-dev #for debian
-patch # as of squid 3.5 --with-open-ssl has become --with-openssl
+patch squid-ssl.patch  # as of squid 3.5 --with-open-ssl has become --with-openssl
 
 cd "${squid_version}"
 ./configure
