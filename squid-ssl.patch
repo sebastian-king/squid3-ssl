@@ -1,0 +1,14 @@
+--- debian/rules.old	2016-11-21 06:58:42.198530246 +0100
++++ debian/rules	2016-11-21 06:58:08.898798914 +0100
+@@ -46,7 +46,10 @@
+ 		--with-pidfile=/var/run/squid.pid \
+ 		--with-filedescriptors=65536 \
+ 		--with-large-files \
+-		--with-default-user=proxy
++		--with-default-user=proxy \
++		--enable-ssl \
++		--with-open-ssl=/usr/lib/ssl/openssl.cnf \
++                --with-openssl=/etc/ssl/
+ 
+ BUILDINFO := $(shell lsb_release -si 2>/dev/null)
+ 
