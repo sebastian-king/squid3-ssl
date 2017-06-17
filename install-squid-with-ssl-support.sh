@@ -1,6 +1,6 @@
 #!/bin/bash
 
-squid_version=$(apt-cache policy squid | grep Candidate: | awk '{print $2}' | awk -F'-' '{print $1}');
+squid_version=$(apt-cache policy squid | grep Candidate: | awk '{print $2}');
 
 architecture=$(dpkg --print-architecture);
 
