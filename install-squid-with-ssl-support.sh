@@ -22,4 +22,4 @@ cd ../
 apt-get install squid-langpack
 dpkg -i squid_"${squid_version}"_"${architecture}".deb squid-common_"${squid_version}"_all.deb
 
-#viola, https_port is now enabled and working in squid
+#et viola, https_port is now enabled and working in squid
