@@ -8,6 +8,8 @@ cd /usr/src/
 
 wget https://raw.githubusercontent.com/sebastian-king/squid3-ssl/master/squid-ssl.patch -O squid-ssl.patch
 
+apt-get install dpkg-dev
+
 apt-get source squid
 apt-get build-dep squid
 apt-get install devscripts build-essential fakeroot libssl-dev #dpkg-dev #for debian
